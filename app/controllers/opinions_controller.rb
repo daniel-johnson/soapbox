@@ -5,7 +5,7 @@ class OpinionsController < ApplicationController
   end
 
   def show
-    @opinion = Opinion.find params[:id]
+    @opinion = Opinion.find(params[:id]).includes(:sources)
   end
 
   def create
