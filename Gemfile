@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem 'slim-rails'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -19,4 +20,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
