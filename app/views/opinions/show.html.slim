@@ -1,0 +1,14 @@
+h3 = @opinion.summary
+
+p = @opinion.body
+hr
+h4 Sources
+= form_for @source do |k|
+  = z.label :content, "Source"
+  = z.text_field :content
+  = z.label :type, "Type of Source"
+  = z.options_for_select :type
+hr
+- @opinion.sources.each do |source|
+
+

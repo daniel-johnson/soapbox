@@ -1,0 +1,18 @@
+h1 Opinions
+
+h4 New Opinion
+= form_for @opinion do |z|
+  = z.label :summary, "Summary"
+  = z.text_field :summary
+  = z.label :body, "Body"
+  = z.text_area :body
+  = z.submit "Submit"
+hr
+- @opinions.each do |opinion|
+    .opinionbox
+      .summary
+        h4
+          = link_to opinion.summary, opinion_path(opinion)
+      .body
+        = opinion.body.truncate(300)
+      hr
