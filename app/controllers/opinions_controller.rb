@@ -1,22 +1,25 @@
 class OpinionsController < ApplicationController
   def index
-    @opinions = Opinions.all
+    @opinions = Opinion.all
     @opinion = Opinion.new
   end
 
   def show
-    @opinion = Opinion.find(params[:id]).includes(:sources)
+    @opinion = Opinion.includes(:sources).find(params[:id])
+    @source = Source.new
   end
 
   def create
-
+    Opinion.create(opinion_params)
+    flash[:notice] = 'FYI, Opinion created.'
+    redirect_to opinions_path
   end
 
   def destroy
     @opinion = Opinion.find params[:id]
 
     if @opinion.destroy
-      flash[:notice] = 'Opinion deleted.'
+      flash[:notice] = 'FYI, Opinion deleted.'
       redirect_to opinions_path
     else
       flash[:alert] = 'Something went wrong, opinion not deleted.'
