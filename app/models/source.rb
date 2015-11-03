@@ -1,3 +1,3 @@
 class Source < ActiveRecord::Base
-  belongs_to :opinion
+  has_and_belongs_to_many :opinions
 end
