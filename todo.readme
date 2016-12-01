@@ -8,16 +8,24 @@ Todo
 ToDo
 
 Create tags for opinions (taggable gem for that)
+ - Polymorphic.
 
-create supportable - a join between user and opinion, with a boolean attribute for "support"
+Create supportable - a join between user and opinion, with a boolean attribute for "support".
 
-Change source to HABTM - for big data
+Change source to HABTM - for big data.
 
-related sources - Someone is entering a source, we give them related sources that are a match
+related sources - Someone is entering a source, we give them related sources that are a match.
 
 
-opinion - like medium
+opinion - like medium.com!
 
-response - should be like twitter. Someone can "respond" to an opinion, and that "response" shows up in their feed, but the original person also sees a notification.
+response - should be like twitter. Someone can "respond" to an opinion, and that "response" shows up in their feed, but the original person also sees a notification, and can respond.
 
-tag - like twitter. You can tag your post, and see the most popular
+tag - like twitter. You can tag your post, and see the most popular.
+
+
+
+
+Source, Opinion, User.
+
+User has

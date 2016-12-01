@@ -12,7 +12,6 @@ class SourcesController < ApplicationController
   end
 
   def destroy
-
   end
 
   private
